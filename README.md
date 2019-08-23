@@ -79,6 +79,7 @@ print ('Test_data_shape=',X_test.shape)
 ```
 
 The out put of the code:
+
 ![data_size](https://github.com/Michael0725/Udacity_Trafficsign_classifier/blob/master/pictures/pic1.PNG)
 
 ```
