@@ -11,7 +11,7 @@ The project contains the following steps:
  
  Use the `pickle` library, we import the data for this project. The code is as follow:
  
- '''
+ ```
  # Load pickled data
 #import the necessary libraries
 import pickle
@@ -40,5 +40,5 @@ X_test , y_test = X_test[0:-5],y_test[0:-5]
 New_test_pic,New_test_pic_label = X_test[-5:len(X_test)],y_test[-5:len(y_test)]
 print (len(New_test_pic))
 
- '''
+```
 
