@@ -8,5 +8,6 @@ The project contains the following steps:
 
 
  **Step 0 Load the data**
- Use the 'pickle' library, we import the data for this project
+ 
+ Use the `pickle` library, we import the data for this project
 
