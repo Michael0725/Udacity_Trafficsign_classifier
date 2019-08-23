@@ -5,3 +5,7 @@ The project contains the following steps:
 * Dataset Summary and Exploration
 * Design and test a Model Architecture
 * Test the Model on New Images
+
+
+**Step 0 Load the data **
+
