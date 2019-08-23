@@ -332,6 +332,8 @@ def mynet(image_data):
   
   Using the traing data to train the defined neural network The training accuracy arrived to about `99.7%` The validation accuracy arrived to about `97.5% `The testing accuracy arrived to `96.2%`
   
+  The epochs are `10`, the batch size is `128` and the optimizer is `AdamOptimizer`
+  
   The code is bellow:
   ```
   ### features and labels here
