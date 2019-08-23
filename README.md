@@ -7,5 +7,5 @@ The project contains the following steps:
 * Test the Model on New Images
 
 
-**Step 0 Load the data 
+** Step 0 Load the data **
 
