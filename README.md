@@ -406,6 +406,15 @@ with tf.Session() as sess:
   You can see the testing processing and the training accuracy, validation accuracy and testing accuracy as bellow picture
   ![data_view](https://github.com/Michael0725/Udacity_Trafficsign_classifier/blob/master/pictures/pic5.PNG)
   
+
+**The process of increasing the test accracy**
+
+Actually, at first, the accuracy on both training data and validation data is very low. The overfitting happened.
+So I tried to find ways to prevent the overfitting.
+At first, I tried to use small converlutional filters, which are 5x5X6 , but it seems the result is not so good.
+So I think I need to increase the data numbers, I tried to shift and rotate the images to increase the scale of training data, the accuracy increased.
+I continue to use the grayscale to change the pic to graystyle and I also add the dropout layers.it seems the result become better and better.
+Finally I got a good training result.
 ## Test the Model on New Images
 
 **Load the new images**
