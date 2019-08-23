@@ -77,5 +77,5 @@ print("Image data shape =", image_shape)
 print("Number of classes =", n_classes)
 print ('Test_data_shape=',X_test.shape)
 ```
-
+![data_size](https://github.com/Michael0725/Udacity_Trafficsign_classifier/blob/master/pictures/pic1.PNG)
 
