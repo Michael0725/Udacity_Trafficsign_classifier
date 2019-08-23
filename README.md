@@ -508,6 +508,30 @@ print ("Accuracy = ",Accuracy,'%')
 
 And you can see the accuracy is 100%
 
+## Since there will be no difference between prediction based on test data set and the 5 new image I get from the test data set.I get 10 new pictures from the internet. And I use the pictures on my own computer to change the pics to the same size 32x32x1.
+
+As for the proccess of changing the image's size, you can refer the code as follow:
+if you want to realize the process on you own computer, just change the pics_path
+```
+import cv2
+import os
+
+import matplotlib.pyplot as plt
+
+pics_path ='D:\\01_Udacity_Self_Drivingcar_Program\\Traffic_Sign\\Traffic_Sign_Classifier\\New_Pics'
+pics = os.listdir(pics_path)
+print pics
+for element in pics:
+    element_path = pics_path + '\\' +element
+    img = cv2.imread(element_path)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    res = cv2.resize(img, (32, 32), interpolation=cv2.INTER_CUBIC)
+    print res.shape
+
+    cv2.imwrite(('D:\\01_Udacity_Self_Drivingcar_Program\\Traffic_Sign\\Traffic_Sign_Classifier\\converted' + '\\' + element),res)
+```
+for The Original pics from the internet, you can refer the folder `Original pics`
+for The resized pics of 32x32 , you can refer the folder 'resized_picture'
 
 
 
