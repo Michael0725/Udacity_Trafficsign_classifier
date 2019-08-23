@@ -130,6 +130,15 @@ The output of the code is as follow:
 
 To preprocess the data set, we mainly normalized the data, grayscale the data and then using shif and rotate to expand the number of the data, which could prevent overfitting while training the model.
 
+The first time I tried to train the model, I find that the accuracy is very low, and after 5 or 6 epochs, the validation accuracy start to decrease.It obvious that overfitting happed. So try to find ways to prevent the overfitting.
+During the comparison, I find that, using the data augmentation makes the huge difference.
+I also tried to change the data to u-0 by using (X_data-128)/128, But it seems the result is not so good.
+I checked from the internet and find someguy use the method of dividing 255. I tried the method, and the result seems good.
+Since it takes a long time to train a model, so I did not combine all the potential method.
+As for gray the image, I just want to decrease the weights to prevent overfitting.
+From the final accuracy, it seems good to combine the 3 methods together.
+
+
 ```
 ### Preprocess the data here. It is required to normalize the data. Other preprocessing steps could include 
 ### converting to grayscale, etc.
