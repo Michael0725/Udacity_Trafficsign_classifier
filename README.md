@@ -7,7 +7,7 @@ The project contains the following steps:
 * Test the Model on New Images
 
 
- **Step 0 Load the data**
+ **Step 1 Load the data**
  
  Use the `pickle` library, we import the data for this project. The code is as follow:
  
@@ -42,3 +42,10 @@ print (len(New_test_pic))
 
 ```
 
+**Step 2 Dataset Summary and Exploration**
+
+throuth the code,we see the size of training data set,validation data set and testing data set.
+
+we randomly picked 1 picture of different class and plot them.
+
+we also plot the data distribution of both training data set and testing data set.
