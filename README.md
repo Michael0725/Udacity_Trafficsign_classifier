@@ -555,6 +555,59 @@ for i in range(len(gray_pic_array)):
 ```
 
 And you can see the plot of the 10 pics from Internet
+![data_view](https://github.com/Michael0725/Udacity_Trafficsign_classifier/blob/master/pictures/PIC_10_1.PNG)
+
+After loading the pics, you can predict the picture 's class by the following code :
+
+`
+with tf.Session() as sess:
+    saver.restore(sess, './lenet') 
+    predict = sess.run(prediction,feed_dict={x:gray_pic_array})
+    top5_10 = sess.run(tf.nn.top_k(tf.constant(predict), k=5))
+print (top5_10)
+plt.figure
+for i in range(len(gray_pic_array)):
+    print ('The top 5 possible class predicted by the neuralnetwork of the',i+1,'th picture is\n')
+    print (class_name[top5_10[1][i]])  
+    plt.subplot(10,2,2*i+1)
+    plt.imshow(test_picture_list[i])
+    plt.xticks(())
+    plt.yticks(())
+    plt.subplot(10,2,2*i+2)
+    plt.bar(csv_file['ClassId'],predict[i])
+`
+
+And the result is as follow:
+
+![data_view](https://github.com/Michael0725/Udacity_Trafficsign_classifier/blob/master/pictures/PIC_10_2.PNG)
+![data_view](https://github.com/Michael0725/Udacity_Trafficsign_classifier/blob/master/pictures/PIC_10_3.PNG)
+
+And you can see from the picture that all the top 5 possible classes of each image is printed.
+
+Now we can calculate the prediction accuracy by the following code 
+`
+### Calculate the accuracy for these 5 new images. 
+### For example, if the model predicted 1 out of 5 signs correctly, it's 20% accurate on these new images.
+##Calculate the accuracy of the prediction
+Correct_item_1 = 0
+for i in range(len(top5_10[1])):
+    if pic_label[i] ==top5_10[1][i][0]:
+        Correct_item_1 += 1
+
+Accuracy = Correct_item_1*10
+print ("Accuracy = ",Accuracy,'%')
+`
+
+And the accuracy is 50%
+
+
+You can see that the accuaracy based on the testing data is 96%, however, based on the pic from internet, the accuracy goes down to 50%.
+There is a huge gap.
+
+
+I think that is because the original picture has diffenret brightness, different resolusion. That may cause the different prediction result.
+
+
 
 
 
