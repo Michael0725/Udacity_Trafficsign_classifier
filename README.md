@@ -531,7 +531,7 @@ for element in pics:
     cv2.imwrite(('D:\\01_Udacity_Self_Drivingcar_Program\\Traffic_Sign\\Traffic_Sign_Classifier\\converted' + '\\' + element),res)
 ```
 for The Original pics from the internet, you can refer the folder `Original pics`
-for The resized pics of 32x32 , you can refer the folder 'resized_picture'
+for The resized pics of 32x32 , you can refer the folder `resized_picture`
 
 
 
