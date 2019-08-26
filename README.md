@@ -600,7 +600,7 @@ Accuracy = Correct_item_1*10
 print ("Accuracy = ",Accuracy,'%')
 ```
 
-And the accuracy is 50%
+And the accuracy is 60%
 
 
 You can see that the accuaracy based on the testing data is 96%, however, based on the pic from internet, the accuracy goes down to 50%.
