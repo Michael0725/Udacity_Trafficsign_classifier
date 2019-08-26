@@ -533,6 +533,30 @@ for element in pics:
 for The Original pics from the internet, you can refer the folder `Original pics`
 for The resized pics of 32x32 , you can refer the folder `resized_picture`
 
+**Load and plot the 10 pics**
+
+The code is as follow:
+```
+pic_list = ['_50limit.jpg','_60limit.jpg','_80limit.jpg','_100limit.jpg','_first_priority.jpg','_yield.jpg','ahead_only.jpg','end_ofspeed_limit.jpg','_30limit.jpg','stop.jpg']
+pic_label = [2,3,5,7,12,13,35,6,1,14]
+test_picture_list = []
+for i in pic_list:
+    pic = cv2.imread(i)
+    test_picture_list.append(pic)
+test_pic_array = np.array(test_picture_list)
+normal_pic_array = normalize_images(test_pic_array)
+gray_pic_array = gray_scale(normal_pic_array)
+
+for i in range(len(gray_pic_array)):
+    plt.subplot(1,10,i+1)
+    plt.imshow(test_picture_list[i])
+    plt.xticks(())
+    plt.yticks(())
+```
+
+And you can see the plot of the 10 pics from Internet
+
+
 
 
 
