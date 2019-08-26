@@ -559,7 +559,7 @@ And you can see the plot of the 10 pics from Internet
 
 After loading the pics, you can predict the picture 's class by the following code :
 
-`
+```
 with tf.Session() as sess:
     saver.restore(sess, './lenet') 
     predict = sess.run(prediction,feed_dict={x:gray_pic_array})
@@ -575,7 +575,7 @@ for i in range(len(gray_pic_array)):
     plt.yticks(())
     plt.subplot(10,2,2*i+2)
     plt.bar(csv_file['ClassId'],predict[i])
-`
+```
 
 And the result is as follow:
 
@@ -588,6 +588,8 @@ Now we can calculate the prediction accuracy by the following code
 `
 ### Calculate the accuracy for these 5 new images. 
 ### For example, if the model predicted 1 out of 5 signs correctly, it's 20% accurate on these new images.
+
+```
 ##Calculate the accuracy of the prediction
 Correct_item_1 = 0
 for i in range(len(top5_10[1])):
@@ -596,7 +598,7 @@ for i in range(len(top5_10[1])):
 
 Accuracy = Correct_item_1*10
 print ("Accuracy = ",Accuracy,'%')
-`
+```
 
 And the accuracy is 50%
 
