@@ -586,8 +586,8 @@ And you can see from the picture that all the top 5 possible classes of each ima
 
 Now we can calculate the prediction accuracy by the following code 
 `
-### Calculate the accuracy for these 5 new images. 
-### For example, if the model predicted 1 out of 5 signs correctly, it's 20% accurate on these new images.
+### Calculate the accuracy for these 10 new images. 
+
 
 ```
 ##Calculate the accuracy of the prediction
@@ -603,11 +603,19 @@ print ("Accuracy = ",Accuracy,'%')
 And the accuracy is 60%
 
 
-You can see that the accuaracy based on the testing data is 96%, however, based on the pic from internet, the accuracy goes down to 50%.
+You can see that the accuaracy based on the testing data is 96%, however, based on the pic from internet, the accuracy goes down to 60%.
 There is a huge gap.
 
 
 I think that is because the original picture has diffenret brightness, different resolusion. That may cause the different prediction result.
+
+### Analyze the prediction on new pictures.
+
+The result is not so ideal, I think it's because the original picture from internet is different from the pictures in the data set.
+It is a question for me to think further what influenced the accuracy of the prediciton.
+Maybe the resolution, maybe the size and maybe other reasons.
+
+
 
 
 
